@@ -7,13 +7,11 @@ const AssignMember = () => {
         <Paper m={28} p={18} withBorder lh={2.5}  >
             <Flex justify={'space-between'}>
             <Flex>
-                <Title order={4} style={{ color: 'blue' }}>&lt; </Title>
-                <Space h={'lg'} />
-                <Title order={4}>Members</Title>
-                <Title order={4} style={{ color: 'blue' }}> / Assign Members</Title>               
+                
+                <Title order={4} style={{ color: 'blue' }}>Assign Members</Title>               
             </Flex>
             <Flex align={'center'} gap={4}>
-                <Text color='green.9'>Custom Role</Text>
+                <Text c='green.9'>Custom Role</Text>
                 <HiPencilSquare  color="green" />
 
             </Flex>
