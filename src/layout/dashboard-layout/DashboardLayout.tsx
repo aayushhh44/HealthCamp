@@ -17,7 +17,7 @@ const DashboardLayout = () => {
           collapsed: { mobile: !opened },
         }}
         padding="md"
-        visibleFrom="sm"
+        // visibleFrom="sm"
       >
         <AppShell.Header>
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />

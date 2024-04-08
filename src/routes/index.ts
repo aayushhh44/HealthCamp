@@ -3,5 +3,5 @@ import LoginRoutes from './LoginRoute';
 import DashboardRoutes from './DashboardRoute';
 
 export default function SystemRoutes() {
-    return useRoutes([LoginRoutes, DashboardRoutes]);
+    return useRoutes([LoginRoutes, DashboardRoutes ]);
 }

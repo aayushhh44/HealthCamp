@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import Loadable from "../components/Loadable";
 import DashboardLayout from "../layout/dashboard-layout/DashboardLayout";
+import RoleManagement from "../pages/dashboard/RoleManagement/RoleManagement";
 
 
 const AuthLogin = Loadable(lazy(() => import("../pages/auth/Login")));
@@ -14,8 +15,8 @@ const DashboardRoutes = {
         element: <AuthLogin />,
       },
       {
-        path: "register",
-        // element: <AuthRegister />
+        path: "role",
+        element: <RoleManagement />
       },
     ],
 };
