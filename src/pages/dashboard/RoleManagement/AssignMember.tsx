@@ -1,4 +1,6 @@
-import {  Box, Button,  Flex, Paper, Space, Switch, Text, TextInput, Title } from "@mantine/core"
+import {  Button,  Flex, Paper, Space, Switch, Text, TextInput, Title } from "@mantine/core"
+import { HiPencilSquare } from "react-icons/hi2";
+
 
 const AssignMember = () => {
     return (
@@ -10,8 +12,10 @@ const AssignMember = () => {
                 <Title order={4}>Members</Title>
                 <Title order={4} style={{ color: 'blue' }}> / Assign Members</Title>               
             </Flex>
-            <Flex>
+            <Flex align={'center'} gap={4}>
                 <Text color='green.9'>Custom Role</Text>
+                <HiPencilSquare  color="green" />
+
             </Flex>
             </Flex>
             
