@@ -5,7 +5,8 @@ import {
   Paper,
   Space,
   Table,
-  Title
+  Title,
+  ScrollArea  
 } from "@mantine/core";
 import { Avatar, Tooltip } from "@mantine/core";
 
@@ -195,7 +196,7 @@ const RoleManagement = () => {
       <Table.Td>{`${element.Roles}(${element.user.length})`}</Table.Td>
       <Table.Td>
         <Tooltip.Group openDelay={300} closeDelay={100}>
-          <Avatar.Group spacing="sm">
+          <Avatar.Group spacing="md">
             {element.user.map((item) => {
               return (
                 <Tooltip label={item.name} withArrow>
@@ -217,10 +218,9 @@ const RoleManagement = () => {
   ));
 
   return (
-    <Paper withBorder p="xl">
-      {/* <Box my="xl" p="lg"> */}
-      <Group justify="space-between">
-       <Title size="h2">Members</Title>
+    <Paper withBorder w="100%">
+      <Group p="xl" justify="space-between">
+        <Title size="h2">Members</Title>
         <Group>
           <Button variant="outline" color="green-color.0">
             Asigned Member
@@ -228,11 +228,16 @@ const RoleManagement = () => {
           <Button color="green-color.0">Asigned Role</Button>
         </Group>
       </Group>
-      <Space h="xl"/>
-      <Table horizontalSpacing="xl" withRowBorders={false}>
-        <Table.Thead bg="#F3F6F9" >
-          <Table.Tr >
-            <Table.Th p="md ">S.N.</Table.Th>
+      <Space h="sm" />
+       <ScrollArea.Autosize miw={300}>
+      <Table
+        horizontalSpacing="xl"
+        withRowBorders={false}
+        style={{ overflowX: "auto", width:"100%" }}
+      >
+        <Table.Thead bg="#F3F6F9">
+          <Table.Tr>
+            <Table.Th p="md">S.N.</Table.Th>
             <Table.Th>Roles</Table.Th>
             <Table.Th>Users</Table.Th>
             <Table.Th>
@@ -242,7 +247,7 @@ const RoleManagement = () => {
         </Table.Thead>
         <Table.Tbody>{rows}</Table.Tbody>
       </Table>
-      {/* </Box> */}
+      </ScrollArea.Autosize>
     </Paper>
   );
 };

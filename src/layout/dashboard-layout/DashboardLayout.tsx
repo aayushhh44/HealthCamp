@@ -27,7 +27,7 @@ const DashboardLayout = () => {
           <Sidebar />
         </AppShell.Navbar>
 
-        <AppShell.Main>
+        <AppShell.Main m="md">
           <Outlet />
         </AppShell.Main>
       </AppShell>
