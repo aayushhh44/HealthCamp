@@ -16,8 +16,21 @@ import {
 } from "@mantine/core";
 
 import { PieChart, LineChart } from "@mantine/charts";
+import { getMyScreenSize } from "../../utils/getMyScreen";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const screensize = getMyScreenSize()
+  const [order, setOrder]= useState(12);
+  useEffect(()=>{
+    if(screensize==='lg'){
+      setOrder(3);
+    }else if(screensize==='md'){
+      setOrder(6)
+    }else{
+      setOrder(12)
+    }
+  },[screensize])
   const data1 = [
     { name: "Standard", value: 400, color: "#E27613" },
     { name: "Premium", value: 300, color: "#4CAF50" },
@@ -93,7 +106,7 @@ const Home = () => {
   ];
   return (
     <Grid>
-      <Grid.Col span={3}>
+      <Grid.Col span={order}>
         <Paper withBorder p="lg">
           <Group justify="space-around" align="center">
             <Paper p={4} bg="#F4F4F4">
@@ -112,7 +125,7 @@ const Home = () => {
           </Group>
         </Paper>
       </Grid.Col>
-      <Grid.Col span={3}>
+      <Grid.Col span={order}>
         <Paper withBorder p="lg">
           <Group justify="space-around" align="center">
             <Paper p={4} bg="#F4F4F4">
@@ -131,7 +144,7 @@ const Home = () => {
           </Group>
         </Paper>
       </Grid.Col>
-      <Grid.Col span={3}>
+      <Grid.Col span={order}>
         <Paper withBorder p="lg">
           <Group justify="space-around" align="center">
             <Paper p={4} bg="#F4F4F4">
@@ -150,7 +163,7 @@ const Home = () => {
           </Group>
         </Paper>
       </Grid.Col>
-      <Grid.Col span={3}>
+      <Grid.Col span={order}>
         <Paper withBorder p="lg">
           <Group justify="space-around" align="center">
             <Paper p={4} bg="#F4F4F4">

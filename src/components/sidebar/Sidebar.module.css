@@ -1,4 +1,4 @@
-/* .parent > li {
+.parent > li {
   cursor: pointer;
   list-style: none;
   background-color: #ffffff;
@@ -82,4 +82,4 @@
 }
 .rotateArrow{
   transform: rotate(90deg);
-} */
+}
